@@ -3,29 +3,22 @@ package lab11;
 public class SumaProstihBrojevaInterval {
 	
 	/**
-	 * Funkcija provjerava da li je broj prost ili ne
-	 * @param int broj
+	 * Funkcija provjerava da li je integer prost ili ne
+	 * @param
 	 * @return boolean
 	 */
 	
 	public static boolean isPrime(int broj)
 	{
-		int prostiIliNe = 0;
+		boolean isPrime = true;
 		for (int i=2; i<broj; i++)
 		{
 			if (broj%i==0)
 			{
-				prostiIliNe++;
+				return false;
 			}
 		}
-		if (prostiIliNe==0)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return isPrime;
 	}
 	
 	public static void main(String[] args) {
